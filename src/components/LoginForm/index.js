@@ -34,7 +34,7 @@ const LoginForm = () => {
         }
 
         const userInfo = { userEmail, userPassword };
-        const loginUrl = "http://localhost:4000/api/auth/login";
+        const loginUrl = "https://quasar-colossal-wing.glitch.me/api/auth/login";
         const loginOptions = {
             mode: "cors",
             method: "POST",

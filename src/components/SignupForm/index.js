@@ -138,7 +138,7 @@ const SignupForm = () => {
 
         console.log("signup Triggered");
 
-        const signupApiUrl = "http://localhost:4000/api/auth/signup";
+        const signupApiUrl = "https://quasar-colossal-wing.glitch.me/api/auth/signup";
 
         const userSignupData = { ...formData, mobileNumber: formData?.mobileNumber.toString() }
 
