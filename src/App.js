@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {HashRouter, Routes, Route} from "react-router-dom";
 import Home from "./components/Home";
 import SignupForm from "./components/SignupForm";
 import LoginForm from "./components/LoginForm";
@@ -12,7 +12,7 @@ import './App.css';
 function App() {
   return (
     <div className="App-container">
-      <BrowserRouter >
+      <HashRouter >
       <Routes>
         <Route path = "/" element = {<Home/>}/>
         <Route path = "/signup" element = {<SignupForm/>} />
@@ -21,7 +21,7 @@ function App() {
         <Route path = "/profile" element = {<ProtectedRoute element={<Profile/>}/>}  />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
