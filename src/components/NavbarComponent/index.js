@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import { useNavigate, useLocation } from 'react-router-dom';
 import './index.css';
 
 const NavbarComponent = () => {
@@ -28,12 +28,12 @@ const NavbarComponent = () => {
                 React Authentication App
             </div>
             <div className="nav-links">
-                <a href="/dashboard" className={isActive('/dashboard')}>
+                <Link to="/dashboard" className={isActive('/dashboard')}>
                     Dashboard
-                </a>
-                <a href="/profile" className={isActive('/profile')}>
+                </Link>
+                <Link to="/profile" className={isActive('/profile')}>
                     Profile
-                </a>
+                </Link>
             </div>
             <button className="logout-btn" onClick={onClickLogout}>
                 Logout
