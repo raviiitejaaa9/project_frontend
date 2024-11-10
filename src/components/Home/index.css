@@ -1,0 +1,104 @@
+.home-container {
+    background-image: linear-gradient(to right, #e2f3f5, #a7d8d9, #ffffff);
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.home-head {
+    color: #3c6e71;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.guest-greeting {
+    color: #3c6e71;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.signup-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.home-btns-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.home-btns-heading {
+    color: #3c6e71;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.home-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.home-btn:hover {
+    background-color: #388E3C;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .signup-login-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-head {
+        font-size: 2.5rem;
+    }
+
+    .guest-greeting {
+        font-size: 1.2rem;
+    }
+
+    .home-btns-heading {
+        font-size: 1rem;
+    }
+
+    .home-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home-head {
+        font-size: 2rem;
+    }
+
+    .guest-greeting {
+        font-size: 1rem;
+    }
+
+    .home-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
