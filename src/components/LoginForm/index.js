@@ -46,9 +46,10 @@ const LoginForm = () => {
             const response = await fetch(loginUrl, loginOptions);
             if (response.ok) {
                 const jsonData = await response.json();
-                const { userId, userData } = jsonData;
+                let { userId, userData } = jsonData;
                 const { firstName, lastName } = userData;
                 const userName = firstName + " " + lastName;
+                if (userData?.password) delete userData?.password;
                 onSuccessfulLogin(userId, userName, userData);
             } else {
                 const jsonData = await response.json();
