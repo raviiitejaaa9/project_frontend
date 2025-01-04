@@ -157,7 +157,8 @@ const SignupForm = () => {
             if (signupResponse.ok) {
                 setSubmitErrorMessage("");
                 const signupJson = await signupResponse.json();
-                const { userId, userData } = signupJson;
+                let { userId, userData } = signupJson;
+                if (userData?.password) delete userData?.password;
                 const { firstName, lastName } = userData;
 
                 const userName = firstName + " " + lastName;
