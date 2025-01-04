@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {HashRouter, Routes, Route} from "react-router-dom";
 import Home from "./components/Home";
 import SignupForm from "./components/SignupForm";
@@ -10,6 +10,11 @@ import NotFound from "./components/NotFound";
 import './App.css';
 
 function App() {
+
+  useEffect(() => {
+    document.title = "Authentication App";
+  }, []);
+
   return (
     <div className="App-container">
       <HashRouter >

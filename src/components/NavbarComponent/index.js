@@ -12,6 +12,7 @@ const NavbarComponent = () => {
         navigate('/login');
         localStorage.removeItem('username');
         localStorage.removeItem('userProfileData');
+        localStorage.clear();
     };
 
     const onClickNavLogo = () => {
